@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رضا ایرجی | معمار و تری‌دی آرتیست</title>
+<meta name="description" content="نمونه‌کار و سابقه کار رضا ایرجی، معمار و تری‌دی آرتیست">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap">
+<style>
+/* ==========================================================
+   طرح: راست‌چین، تک‌ستونی و آرام. عکس‌ها تنها رنگ صفحه‌اند.
+   رنگ‌ها و فونت‌ها فقط همین‌جا تعریف می‌شوند، برای تغییر ظاهر سایت همین بخش را عوض کنید.
+   ========================================================== */
+:root {
+  --bg: #F2F3F1;          /* زمینه، خاکستری بتنی */
+  --surface: #E8EAE7;     /* نوار و بخش‌های ثانویه */
+  --fg: #151716;          /* متن اصلی */
+  --muted: #565B58;       /* متن فرعی */
+  --line: #D4D8D4;        /* خط‌های جداکننده */
+  --accent: #2B6A60;      /* تنها رنگ تأکید */
+  --lb-bg: #0B0C0B;       /* زمینه نمای تمام‌صفحه، در هر دو حالت تیره */
+  --lb-fg: #EDEFED;
+  --font-display: 'Vazirmatn', 'Segoe UI', Tahoma, system-ui, sans-serif;
+  --font-body: 'Vazirmatn', 'Segoe UI', Tahoma, system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121413; --surface: #1B1E1C; --fg: #EDEFED; --muted: #A2A8A4;
+    --line: #2B2F2D; --accent: #7DC4B7;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121413; --surface: #1B1E1C; --fg: #EDEFED; --muted: #A2A8A4;
+  --line: #2B2F2D; --accent: #7DC4B7;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.95;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  -webkit-text-size-adjust: 100%;
+}
+.site { max-width: 1120px; margin-inline: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3, p, dl, dd { margin: 0; }
+.nums { font-variant-numeric: tabular-nums; }
+
+/* نوار پیش‌نمایش، با انتشار نهایی حذف می‌شود */
+.draft {
+  margin-inline: calc(50% - 50vw);
+  padding: 6px 16px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: .82rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* سربرگ */
+.top {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 8px 24px; padding-block: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.brand { font-weight: 700; font-size: 1rem; text-decoration: none; }
+.nav { display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: .94rem; }
+.nav a { color: var(--muted); text-decoration: none; padding-block: 2px; border-bottom: 1px solid transparent; }
+.nav a:hover { color: var(--fg); border-bottom-color: var(--accent); }
+
+/* معرفی */
+.hero {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  align-items: center; gap: clamp(24px, 5vw, 64px);
+  padding-block: clamp(40px, 7vw, 88px);
+}
+.avatar {
+  width: clamp(148px, 22vw, 236px); aspect-ratio: 1; border-radius: 50%;
+  overflow: hidden; background: var(--surface) center / cover no-repeat;
+  border: 1px solid var(--line);
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+}
+.avatar svg { display: block; width: 100%; height: 100%; }
+.who { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+.who .avatar { margin-bottom: 10px; }
+.avatar[role="button"] { cursor: pointer; }
+.avatar[role="button"]:hover { border-color: var(--accent); }
+.hero h1 { font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; line-height: 1.6; }
+.hero .role { color: var(--accent); font-weight: 500; font-size: 1rem; line-height: 1.7; }
+.hero .intro { max-width: 58ch; font-size: 1.15rem; line-height: 2.1; color: var(--fg); }
+.hero .intro p + p { margin-top: .6em; }
+.cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
+  font-weight: 500; text-decoration: none; color: var(--fg);
+  padding-block: 4px; border-bottom: 1px solid var(--accent);
+}
+.cta:hover { color: var(--accent); }
+button.cta { font: inherit; background: none; border-width: 0 0 1px; border-style: solid; border-color: var(--accent); border-radius: 0; cursor: pointer; }
+.resume { margin-top: 20px; }
+.cta svg { width: 16px; height: 16px; flex: none; }
+
+/* عنوان بخش‌ها */
+.section { padding-block: clamp(40px, 6vw, 72px); border-top: 1px solid var(--line); }
+.section > h2 {
+  display: flex; align-items: center; gap: 16px;
+  font-size: .95rem; font-weight: 500; color: var(--muted); margin-bottom: clamp(24px, 4vw, 40px);
+}
+.section > h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+/* نمونه‌کارها */
+.project + .project { margin-top: clamp(48px, 7vw, 88px); }
+.p-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 32px; margin-bottom: 16px; }
+.p-head h3 { font-size: 1.4rem; font-weight: 700; line-height: 1.5; }
+.tag {
+  display: inline-block; margin-inline-start: 10px; padding: 0 9px; vertical-align: middle;
+  border: 1px solid var(--accent); color: var(--accent);
+  font-size: .72rem; font-weight: 500; line-height: 1.7;
+}
+.meta { color: var(--muted); font-size: .94rem; }
+.meta2 { color: var(--muted); font-size: .88rem; }
+
+.rail {
+  display: flex; align-items: flex-start; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scrollbar-width: none;
+}
+.rail::-webkit-scrollbar { display: none; }
+.item {
+  --r: 1.5; --maxh: 560px; /* نسبت عرض به ارتفاع هر عکس و بیشترین ارتفاع نمایش */
+  flex: 0 0 auto; width: min(calc(var(--maxh) * var(--r)), 82vw, 780px); max-width: 100%; margin: 0;
+  display: grid; gap: 10px; align-content: start; scroll-snap-align: start;
+}
+.item figcaption { font-weight: 500; font-size: .98rem; line-height: 1.8; }
+.slide {
+  position: relative; width: 100%; aspect-ratio: var(--r);
+  cursor: pointer;
+  background: var(--surface) center / cover no-repeat;
+  border: 1px solid var(--line);
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+}
+.slide-n {
+  position: absolute; inset-block-end: 10px; inset-inline-end: 12px; z-index: 1;
+  padding: 0 10px; font-size: .78rem; line-height: 1.8;
+  background: rgba(11, 12, 11, .62); color: var(--lb-fg);
+}
+.p-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 12px; }
+.count { color: var(--muted); font-size: .88rem; }
+.btns { display: flex; gap: 8px; }
+.nb {
+  width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer;
+  background: transparent; color: var(--fg); border: 1px solid var(--line); border-radius: 0;
+}
+.nb:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.nb:disabled { opacity: .35; cursor: default; }
+.nb svg { width: 18px; height: 18px; }
+.nb.prev svg, .lb-nav.prev svg { transform: scaleX(-1); }
+
+/* سابقه کار */
+.exp { list-style: none; margin: 0; padding: 0; }
+.exp li { display: grid; grid-template-columns: 11rem minmax(0, 1fr) auto; gap: 4px 32px; padding-block: 18px; border-top: 1px solid var(--line); }
+.exp li:first-child { border-top: 0; padding-top: 0; }
+.exp .when { color: var(--muted); font-size: .94rem; }
+.exp .what { font-weight: 700; }
+.exp .where { color: var(--muted); font-weight: 400; }
+.exp .note { grid-column: 2 / -1; color: var(--muted); font-size: .96rem; max-width: 62ch; }
+
+/* قاب مدارک سابقه کار */
+.docs { grid-column: 3; grid-row: 1; align-self: start; display: grid; gap: 8px; padding: 10px; border: 1px solid var(--line); background: var(--surface); }
+.docs-row { display: flex; gap: 8px; }
+.doc {
+  width: 112px; aspect-ratio: var(--r, .71); cursor: zoom-in;
+  background: var(--bg) center top / cover no-repeat; border: 1px solid var(--line);
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+}
+.doc:hover { border-color: var(--accent); }
+.docs-cap { color: var(--muted); font-size: .8rem; line-height: 1.7; max-width: 232px; }
+
+/* تماس */
+.contact-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding-block: 10px; border-top: 1px solid var(--line); }
+.contact-line:first-of-type { border-top: 0; padding-top: 0; }
+.contact-line .k { width: 6rem; color: var(--muted); font-size: .94rem; }
+.contact-line .v { font-size: 1.15rem; font-weight: 500; unicode-bidi: isolate; direction: ltr; overflow-wrap: anywhere; }
+.contact-line a.v { text-decoration-color: var(--accent); text-underline-offset: 5px; }
+.copy {
+  font: inherit; font-size: .84rem; cursor: pointer; padding: 0 12px; line-height: 1.9;
+  background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 0;
+}
+.copy:hover { color: var(--accent); border-color: var(--accent); }
+
+footer { padding-block: 28px 36px; border-top: 1px solid var(--line); color: var(--muted); font-size: .84rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; }
+
+/* نمای تمام‌صفحه */
+.lb {
+  position: fixed; inset: 0; z-index: 50; display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+  background: var(--lb-bg); color: var(--lb-fg);
+  padding: env(safe-area-inset-top, 0px) max(16px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(16px, env(safe-area-inset-left, 0px));
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+}
+.lb-bar, .lb-foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.lb-title { font-weight: 500; font-size: .96rem; }
+.lb-x, .lb-nav {
+  display: grid; place-items: center; cursor: pointer; color: var(--lb-fg);
+  background: transparent; border: 1px solid rgba(237, 239, 237, .28); border-radius: 0;
+}
+.lb-x { width: 40px; height: 40px; }
+.lb-x svg { width: 18px; height: 18px; }
+.lb-x:hover, .lb-nav:hover:not(:disabled) { border-color: var(--lb-fg); }
+.lb-stage {
+  position: relative; min-height: 0;
+  background: center / contain no-repeat;
+  touch-action: none; /* جلوگیری از زوم با دو انگشت */
+}
+.lb-nav { position: absolute; top: 50%; width: 44px; height: 44px; transform: translateY(-50%); background: rgba(11, 12, 11, .55); z-index: 2; }
+.lb-nav svg { width: 20px; height: 20px; }
+.lb-nav.prev { inset-inline-start: 4px; }
+.lb-nav.next { inset-inline-end: 4px; }
+.lb-nav:disabled { opacity: .3; cursor: default; }
+/* نمای مدارک: قابل بزرگ‌نمایی و جابه‌جایی */
+.lb-stage.docmode { background-image: none !important; }
+.lb-doc { position: absolute; inset: 0; display: flex; overflow: auto; overscroll-behavior: contain; touch-action: none; cursor: grab; }
+.lb-doc.drag { cursor: grabbing; }
+.lb-doc img { flex: none; display: block; margin: auto; max-width: none; height: auto; pointer-events: none; -webkit-user-select: none; user-select: none; }
+.lb-zoom { display: flex; align-items: center; gap: 8px; }
+.zb {
+  min-width: 40px; height: 36px; padding: 0 12px; font: inherit; font-size: .9rem; cursor: pointer;
+  color: var(--lb-fg); background: transparent; border: 1px solid rgba(237, 239, 237, .28); border-radius: 0;
+}
+.zb:hover:not(:disabled) { border-color: var(--lb-fg); }
+.zb:disabled { opacity: .3; cursor: default; }
+.lb-foot { justify-content: center; flex-wrap: wrap; gap: 8px 24px; font-size: .88rem; color: rgba(237, 239, 237, .75); }
+@media (max-width: 640px) { .lb-nav { display: none; } .lb-stage.docmode .lb-nav { display: grid; } }
+
+@media (max-width: 640px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .exp li { grid-template-columns: minmax(0, 1fr); }
+  .exp .note { grid-column: 1; }
+  .nav a { padding-block: 8px; }
+  .copy { min-height: 40px; }
+  .nb { width: 44px; height: 44px; }
+  .exp .docs { grid-column: 1; grid-row: auto; justify-self: start; }
+  .item { --maxh: 500px; width: min(calc(var(--maxh) * var(--r)), 88vw); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print { .rail, .p-nav, .lb { display: none !important; } }
+</style>
+
+</head>
+<body>
+<div class="site" lang="fa" dir="rtl">
+
+  <header class="top">
+    <a class="brand" href="#top" id="brandName"></a>
+    <nav class="nav" aria-label="بخش‌های سایت">
+      <a href="#work">نمونه‌کار</a>
+      <a href="#experience">سابقه کار</a>
+      <a href="#contact">تماس</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="معرفی">
+      <div class="who">
+        <div class="avatar" id="avatar" role="img" aria-label="عکس پروفایل"></div>
+        <h1 id="heroName"></h1>
+        <p class="role" id="heroRole"></p>
+      </div>
+      <div>
+        <div class="intro" id="heroIntro"></div>
+        <a class="cta" href="#work">مشاهده نمونه‌کار
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="h-work">
+      <h2 id="h-work">نمونه‌کار</h2>
+      <div id="projects"></div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="h-exp">
+      <h2 id="h-exp">سابقه کار</h2>
+      <ol class="exp" id="exp"></ol>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">تماس</h2>
+      <div id="contactBox"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span id="copyright"></span>
+    <span>تمام تصاویر این سایت متعلق به صاحب سایت است. کپی یا استفاده از آنها بدون اجازه مجاز نیست.</span>
+  </footer>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="نمایش تمام‌صفحه" lang="fa" dir="rtl" hidden>
+  <div class="lb-bar">
+    <span class="lb-title" id="lbTitle"></span>
+    <button class="lb-x" id="lbClose" type="button" aria-label="بستن">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <div class="lb-doc" id="lbDoc" dir="ltr" hidden><img id="lbDocImg" alt="" draggable="false"></div>
+    <button class="lb-nav prev" id="lbPrev" type="button" aria-label="تصویر قبلی">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+    </button>
+    <button class="lb-nav next" id="lbNext" type="button" aria-label="تصویر بعدی">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+    </button>
+  </div>
+  <div class="lb-foot">
+    <span id="lbCount"></span>
+    <div class="lb-zoom" id="lbZoom" hidden>
+      <button class="zb" id="zOut" type="button" aria-label="کوچک‌نمایی">−</button>
+      <button class="zb nums" id="zReset" type="button" aria-label="اندازه اصلی">۱۰۰٪</button>
+      <button class="zb" id="zIn" type="button" aria-label="بزرگ‌نمایی">+</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ==========================================================
+     ویرایش محتوا: برای تغییر متن‌ها، پروژه‌ها و اطلاعات تماس فقط این سه بخش را عوض کنید.
+     ========================================================== */
+
+  // ۱) اطلاعات شما
+  var CONFIG = {
+    name: 'رضا ایرجی',
+    role: 'معمار / تری‌دی آرتیست',
+    photo: 'img/profile.jpg',          // عکس داخل دایره. خالی باشد، تصویر نمونه نشان داده می‌شود
+    photoFull: '', // اختیاری. اگر مسیر عکسی بگذارید، با کلیک روی دایره در نمای تمام‌صفحه باز می‌شود
+    intro: [
+      'با تسلط کامل و توانایی کاربردی در استفاده از AutoCAD / Revit / SketchUp / 3ds Max / V-Ray / Adobe Photoshop و استفاده کاربردی از هوش مصنوعی.',
+      'دارای سرعت عمل بالا، دقت و تسلط در اجرای فرایند مدل‌سازی و رندرینگ معماری حرفه‌ای با کیفیت و استانداردهای بصری.'
+    ],
+    telegram: 'R_iraji83',
+    phone: '09352136717',
+    year: '۱۴۰۵'
+  };
+
+  // ۲) نمونه‌کار: یک گالری ورق‌زدنی برای همه تصاویر. هر مورد یک عکس است.
+  //    caption: یک خط توضیح که بالای همان عکس نمایش داده می‌شود.
+  //    برای عکس واقعی src بگذارید، مثلا { src: 'img/villa-1.jpg', caption: 'نمای اصلی ویلا' }.
+  //    موردهای seed و kind تصویر جای‌نگه‌دارند و با عکس واقعی عوض می‌شوند.
+  //    ratio: نسبت عرض به ارتفاع عکس (مثلا ۱۰۵۹ ÷ ۱۴۸۵). برای عکس‌های افقی ۱٫۵ است.
+  var GALLERY = [
+    { src: 'img/work-01.jpg', ratio: 0.7131, caption: 'ورودی مسجد فاروغ · سنندج · ۱۴۰۳' },
+    { src: 'img/work-02.jpg', ratio: 0.6582, caption: 'مالک: آقای لهونی · تهران' },
+    { src: 'img/work-03.jpg', ratio: 1.2151, caption: 'مالک: محمد صدیق محمدی · سنندج' },
+    { src: 'img/work-04.jpg', ratio: 0.4527, caption: 'مدلینگ مجتمع اداری · پست تبلیغاتی برای اینستاگرام' },
+    { src: 'img/work-05.jpg', ratio: 0.784, caption: 'پروژه‌ای در دفتر فنی مهندسی ریتم' }
+  ];
+
+  // ۳) سابقه کار: هر مورد یک ردیف. where و note اختیاری‌اند.
+  //    docs: برگه‌های مدرک (اختیاری). کنار ردیف در یک قاب نمایش داده می‌شوند و با کلیک تمام‌صفحه و قابل زوم باز می‌شوند.
+  //    ratio: نسبت عرض به ارتفاع هر برگه. docsTitle: عنوان قاب.
+  var EXPERIENCE = [
+    {
+      when: '۱۴۰۲ تا کنون', what: 'کارشناسی معماری',
+      docsTitle: 'گواهی سابقه کار',
+      docs: [
+        { src: 'img/resume-1.jpg', ratio: 0.7136 },
+        { src: 'img/resume-2.jpg', ratio: 0.6805 }
+      ]
+    }
+  ];
+
+  /* ==========================================================
+     از اینجا به بعد کد سایت است و برای تغییر محتوا لازم نیست دست بزنید.
+     ========================================================== */
+
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var fa = function (s) { return String(s).replace(/\d/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'.charAt(d); }); };
+  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+  var uri = function (svg) {
+    return 'data:image/svg+xml,' + encodeURIComponent(svg).replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29');
+  };
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
+
+  try {
+    document.documentElement.setAttribute('dir', 'rtl');
+    document.documentElement.setAttribute('lang', 'fa');
+  } catch (e) {}
+
+  /* تصویر جایگزین: طرح ساده نما یا پلان، تا عکس‌های واقعی بیایند */
+  var TONES = [['#D9DDD9', '#3A3F3C'], ['#CFD7D8', '#33403F'], ['#DDD9D3', '#3F3B35']];
+  function placeholder(seed, kind) {
+    var s = seed * 7919 + 13;
+    var r = function () { s = (s * 9301 + 49297) % 233280; return s / 233280; };
+    var t = TONES[seed % 3], bg = t[0], ink = t[1], g = '';
+    if (kind === 'plan') {
+      var x0 = 250, y0 = 170, w = 1100, h = 720;
+      g += '<rect x="' + x0 + '" y="' + y0 + '" width="' + w + '" height="' + h + '" fill="none" stroke="' + ink + '" stroke-width="14"/>';
+      var xs = [], ys = [];
+      for (var i = 0; i < 3; i++) xs.push(x0 + 200 + Math.round(r() * (w - 400)));
+      for (var j = 0; j < 2; j++) ys.push(y0 + 180 + Math.round(r() * (h - 360)));
+      xs.forEach(function (x) { g += '<line x1="' + x + '" y1="' + y0 + '" x2="' + x + '" y2="' + (y0 + h) + '" stroke="' + ink + '" stroke-width="7"/>'; });
+      ys.forEach(function (y) { g += '<line x1="' + x0 + '" y1="' + y + '" x2="' + (x0 + w) + '" y2="' + y + '" stroke="' + ink + '" stroke-width="7"/>'; });
+      g += '<rect x="' + (x0 + 60) + '" y="' + (y0 + 60) + '" width="180" height="120" fill="none" stroke="' + ink + '" stroke-width="3" stroke-dasharray="14 10"/>';
+    } else {
+      var gy = 820;
+      g += '<rect x="0" y="' + gy + '" width="1600" height="247" fill="' + ink + '" fill-opacity=".12"/>';
+      g += '<line x1="0" y1="' + gy + '" x2="1600" y2="' + gy + '" stroke="' + ink + '" stroke-width="6"/>';
+      var x = 170, n = 2 + Math.floor(r() * 3);
+      for (var k = 0; k < n; k++) {
+        var bw = 220 + Math.round(r() * 260), bh = 170 + Math.round(r() * 330), by = gy - bh;
+        g += '<rect x="' + x + '" y="' + by + '" width="' + bw + '" height="' + bh + '" fill="' + ink + '" fill-opacity=".09" stroke="' + ink + '" stroke-width="6"/>';
+        for (var wy = by + 40; wy < gy - 60; wy += 90) {
+          for (var wx = x + 30; wx < x + bw - 70; wx += 80) {
+            g += '<rect x="' + wx + '" y="' + wy + '" width="46" height="52" fill="' + ink + '" fill-opacity=".22"/>';
+          }
+        }
+        x += bw + 10;
+        if (x > 1350) break;
+      }
+    }
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1067"><rect width="1600" height="1067" fill="' + bg + '"/>' + g + '</svg>';
+    return uri(svg);
+  }
+
+  /* سربرگ و معرفی */
+  $('#brandName').textContent = CONFIG.name;
+  $('#heroName').textContent = CONFIG.name;
+  $('#heroRole').textContent = CONFIG.role;
+  // نام‌های انگلیسی (مثل نرم‌افزارها) به‌صورت یک بلوک چپ‌به‌راست نمایش داده می‌شوند تا ترتیبشان در متن فارسی به‌هم نریزد
+  var ltrRuns = function (s) { return s.replace(/[A-Za-z0-9][A-Za-z0-9 \/\-_]*[A-Za-z0-9]/g, function (m) { return '<bdi dir="ltr">' + m + '</bdi>'; }); };
+  $('#heroIntro').innerHTML = CONFIG.intro.map(function (p) { return '<p>' + ltrRuns(esc(p)) + '</p>'; }).join('');
+  $('#copyright').textContent = '© ' + CONFIG.year + ' ' + CONFIG.name;
+
+  var avatar = $('#avatar');
+  if (CONFIG.photo) {
+    avatar.style.backgroundImage = 'url("' + CONFIG.photo + '")';
+    if (CONFIG.photoFull) {
+      // با کلیک یا Enter روی دایره، عکس کامل در نمای تمام‌صفحه باز می‌شود
+      avatar.setAttribute('role', 'button');
+      avatar.setAttribute('tabindex', '0');
+      avatar.setAttribute('aria-label', 'نمایش کامل عکس پروفایل');
+      avatar.addEventListener('click', function () { openLb([{ src: CONFIG.photoFull, title: CONFIG.name }], 0, avatar); });
+      avatar.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb([{ src: CONFIG.photoFull, title: CONFIG.name }], 0, avatar); }
+      });
+    }
+  } else {
+    avatar.innerHTML = '<svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="none"/><circle cx="100" cy="78" r="34" fill="none" stroke="currentColor" stroke-width="3" opacity=".45"/><path d="M34 190c4-38 30-58 66-58s62 20 66 58" fill="none" stroke="currentColor" stroke-width="3" opacity=".45"/></svg>';
+    avatar.style.color = 'var(--muted)';
+  }
+
+  /* نمونه‌کار: یک گالری ورق‌زدنی، با یک خط توضیح بالای هر عکس */
+  GALLERY.forEach(function (g, gi) { g._src = g.src || placeholder(g.seed || (gi + 1), g.kind || 'elev'); });
+  var total = GALLERY.length;
+  var galleryEl = $('#projects');
+  galleryEl.innerHTML =
+    '<div class="rail" tabindex="0" role="group" aria-label="گالری نمونه‌کار"></div>' +
+    '<div class="p-nav"><span class="count nums" aria-live="polite"></span>' +
+    '<div class="btns"><button class="nb prev" type="button" aria-label="تصویر قبلی">' + CHEV + '</button>' +
+    '<button class="nb next" type="button" aria-label="تصویر بعدی">' + CHEV + '</button></div></div>';
+  var rail = $('.rail', galleryEl), count = $('.count', galleryEl), prev = $('.prev', galleryEl), next = $('.next', galleryEl);
+  var lbItems = GALLERY.map(function (g) { return { src: g._src, title: g.caption }; });
+  var figs = GALLERY.map(function (g, gi) {
+    var fig = document.createElement('figure');
+    fig.className = 'item';
+    fig.style.setProperty('--r', g.ratio || 1.5);
+    var cap = document.createElement('figcaption');
+    cap.textContent = g.caption;
+    if (!g.src) {
+      // تصویر جای‌نگه‌دار با برچسب «نمونه» مشخص می‌شود
+      var tg = document.createElement('span');
+      tg.className = 'tag';
+      tg.textContent = 'نمونه';
+      cap.appendChild(tg);
+    }
+    var d = document.createElement('div');
+    d.className = 'slide';
+    d.setAttribute('role', 'button');
+    d.setAttribute('tabindex', '0');
+    d.setAttribute('aria-label', 'نمایش تمام‌صفحه: ' + g.caption);
+    d.style.backgroundImage = 'url("' + g._src + '")';
+    d.innerHTML = '<span class="slide-n nums">' + fa(gi + 1) + ' از ' + fa(total) + '</span>';
+    d.addEventListener('click', function () { openLb(lbItems, gi, d); });
+    d.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(lbItems, gi, d); }
+    });
+    fig.appendChild(cap);
+    fig.appendChild(d);
+    rail.appendChild(fig);
+    return fig;
+  });
+  var idx = 0;
+  function update() {
+    // عکس‌ها عرض متفاوت دارند، پس نزدیک‌ترین عکس به لبه شروع گالری را پیدا می‌کنیم
+    var edge = rail.getBoundingClientRect().right, best = 0, bd = Infinity;
+    figs.forEach(function (f, i) {
+      var d = Math.abs(f.getBoundingClientRect().right - edge);
+      if (d < bd) { bd = d; best = i; }
+    });
+    var atEnd = Math.abs(rail.scrollLeft) >= rail.scrollWidth - rail.clientWidth - 2;
+    idx = atEnd && rail.scrollWidth > rail.clientWidth ? total - 1 : best;
+    count.textContent = 'تصویر ' + fa(idx + 1) + ' از ' + fa(total);
+    prev.disabled = idx === 0;
+    next.disabled = idx === total - 1;
+  }
+  function go(i) {
+    i = Math.max(0, Math.min(total - 1, i));
+    figs[i].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', inline: 'start', block: 'nearest' });
+  }
+  var tick = false;
+  rail.addEventListener('scroll', function () {
+    if (tick) return;
+    tick = true;
+    requestAnimationFrame(function () { tick = false; update(); });
+  }, { passive: true });
+  prev.addEventListener('click', function () { go(idx - 1); });
+  next.addEventListener('click', function () { go(idx + 1); });
+  update();
+
+  /* سابقه کار */
+  var expEl = $('#exp');
+  EXPERIENCE.forEach(function (e) {
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="when nums">' + esc(e.when) + '</span>' +
+      '<span class="what">' + esc(e.what) + (e.where ? ' <span class="where">· ' + esc(e.where) + '</span>' : '') + '</span>' +
+      (e.note ? '<p class="note">' + esc(e.note) + '</p>' : '');
+    if (e.docs && e.docs.length) {
+      var title = e.docsTitle || 'مدرک';
+      var items = e.docs.map(function (d) { return { src: d.src, title: title, zoom: true }; });
+      var box = document.createElement('div');
+      box.className = 'docs';
+      var row = document.createElement('div');
+      row.className = 'docs-row';
+      e.docs.forEach(function (d, di) {
+        var b = document.createElement('div');
+        b.className = 'doc';
+        b.setAttribute('role', 'button');
+        b.setAttribute('tabindex', '0');
+        b.setAttribute('aria-label', title + '، برگه ' + fa(di + 1) + ' از ' + fa(e.docs.length) + '، باز کردن');
+        b.style.setProperty('--r', d.ratio || 0.71);
+        b.style.backgroundImage = 'url("' + d.src + '")';
+        b.addEventListener('click', function () { openLb(items, di, b); });
+        b.addEventListener('keydown', function (ev) {
+          if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); openLb(items, di, b); }
+        });
+        row.appendChild(b);
+      });
+      var cap = document.createElement('span');
+      cap.className = 'docs-cap';
+      cap.textContent = title + ' · برای مطالعه روی هر برگ بزنید';
+      box.appendChild(row);
+      box.appendChild(cap);
+      li.appendChild(box);
+    }
+    expEl.appendChild(li);
+  });
+
+  /* تماس: نشانی به‌صورت متن قابل انتخاب نمایش داده می‌شود و دکمه کپی دارد */
+  function contactLine(label, valueHtml, copyText) {
+    return '<div class="contact-line"><span class="k">' + label + '</span>' + valueHtml +
+      '<button class="copy" type="button" data-copy="' + esc(copyText) + '">کپی</button></div>';
+  }
+  $('#contactBox').innerHTML =
+    contactLine('تلگرام', '<a class="v" href="https://t.me/' + esc(CONFIG.telegram) + '" target="_blank" rel="noopener">' + esc(CONFIG.telegram) + '</a>', CONFIG.telegram) +
+    contactLine('تلفن', '<span class="v">' + esc(CONFIG.phone) + '</span>', CONFIG.phone);
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var text = b.getAttribute('data-copy');
+      var done = function () { b.textContent = 'کپی شد'; setTimeout(function () { b.textContent = 'کپی'; }, 1600); };
+      var fallback = function () {
+        var v = b.previousElementSibling;
+        try {
+          var rg = document.createRange(); rg.selectNodeContents(v);
+          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(rg);
+        } catch (e) {}
+        b.textContent = 'انتخاب شد، کپی کنید';
+        setTimeout(function () { b.textContent = 'کپی'; }, 2200);
+      };
+      try {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } catch (e) { fallback(); }
+    });
+  });
+
+  /* نمای تمام‌صفحه. عکس‌های نمونه‌کار بدون زوم‌اند، برگه‌های مدارک (zoom: true) قابل بزرگ‌نمایی هستند */
+  var lb = $('#lb'), stage = $('#lbStage'), lbTitle = $('#lbTitle'), lbCount = $('#lbCount');
+  var lbPrev = $('#lbPrev'), lbNext = $('#lbNext'), lbClose = $('#lbClose');
+  var docEl = $('#lbDoc'), docImg = $('#lbDocImg'), zoomBox = $('#lbZoom');
+  var zIn = $('#zIn'), zOut = $('#zOut'), zReset = $('#zReset');
+  var cur = { items: [], i: 0, opener: null };
+  var Z = { z: 1, min: 1, max: 4 };
+  var multi = false; // در این حرکت دو انگشت استفاده شده است
+
+  function isDoc() { return !!(cur.items[cur.i] && cur.items[cur.i].zoom); }
+
+  // عرض برگه وقتی کامل در قاب جا می‌شود
+  function fitBase() {
+    var nw = docImg.naturalWidth, nh = docImg.naturalHeight;
+    if (!nw || !nh) return 0;
+    return Math.min(docEl.clientWidth, docEl.clientHeight * nw / nh);
+  }
+  // fx و fy نقطه‌ای از قاب است که هنگام زوم ثابت می‌ماند. پیش‌فرض مرکز.
+  function applyZoom(z, fx, fy) {
+    var base = fitBase();
+    if (!base) return;
+    z = Math.max(Z.min, Math.min(Z.max, z));
+    if (fx == null) { fx = docEl.clientWidth / 2; fy = docEl.clientHeight / 2; }
+    var w0 = docImg.offsetWidth, h0 = docImg.offsetHeight;
+    var u = w0 ? (docEl.scrollLeft + fx - docImg.offsetLeft) / w0 : 0.5;
+    var v = h0 ? (docEl.scrollTop + fy - docImg.offsetTop) / h0 : 0.5;
+    Z.z = z;
+    docImg.style.width = Math.round(base * z) + 'px';
+    docImg.style.visibility = 'visible';
+    docEl.scrollLeft = u * docImg.offsetWidth + docImg.offsetLeft - fx;
+    docEl.scrollTop = v * docImg.offsetHeight + docImg.offsetTop - fy;
+    zReset.textContent = fa(Math.round(z * 100)) + '٪';
+    zOut.disabled = z <= Z.min + 0.001;
+    zIn.disabled = z >= Z.max - 0.001;
+  }
+  function step(f) { applyZoom(Z.z * f); }
+  zIn.addEventListener('click', function () { step(1.4); });
+  zOut.addEventListener('click', function () { step(1 / 1.4); });
+  zReset.addEventListener('click', function () { applyZoom(1); });
+
+  function showLb(i) {
+    var items = cur.items, many = items.length > 1;
+    cur.i = Math.max(0, Math.min(items.length - 1, i));
+    var it = items[cur.i], doc = !!it.zoom;
+    stage.classList.toggle('docmode', doc);
+    docEl.hidden = zoomBox.hidden = !doc;
+    if (doc) {
+      stage.style.backgroundImage = 'none';
+      Z.z = 1;
+      docImg.style.visibility = 'hidden';
+      docImg.style.width = '0px';
+      docEl.scrollLeft = docEl.scrollTop = 0;
+      docImg.onload = function () { applyZoom(1); };
+      docImg.src = it.src;
+      if (docImg.complete && docImg.naturalWidth) applyZoom(1);
+    } else {
+      stage.style.backgroundImage = 'url("' + it.src + '")';
+    }
+    lbTitle.textContent = it.title || '';
+    lbCount.textContent = many ? fa(cur.i + 1) + ' از ' + fa(items.length) : '';
+    lbPrev.hidden = lbNext.hidden = !many;
+    lbPrev.disabled = cur.i === 0;
+    lbNext.disabled = cur.i === items.length - 1;
+  }
+  // items: فهرست {src, title, zoom}، ii: شماره تصویر اول
+  function openLb(items, ii, opener) {
+    cur.items = items; cur.opener = opener;
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    showLb(ii);
+    lbClose.focus();
+  }
+  function closeLb() {
+    lb.hidden = true;
+    docEl.hidden = zoomBox.hidden = true;
+    stage.classList.remove('docmode');
+    document.body.style.overflow = '';
+    stage.style.backgroundImage = 'none';
+    if (cur.opener) cur.opener.focus();
+  }
+  lbClose.addEventListener('click', closeLb);
+  // در راست‌چین، «بعدی» سمت چپ است
+  lbNext.addEventListener('click', function () { showLb(cur.i + 1); });
+  lbPrev.addEventListener('click', function () { showLb(cur.i - 1); });
+  window.addEventListener('resize', function () { if (!lb.hidden && isDoc()) applyZoom(Z.z); });
+
+  // ورق زدن با کشیدن انگشت. در نمای مدارک فقط وقتی زوم نشده باشد.
+  var sx = null;
+  stage.addEventListener('pointerdown', function (e) { sx = e.clientX; });
+  stage.addEventListener('pointerup', function (e) {
+    if (sx === null) return;
+    var dx = e.clientX - sx; sx = null;
+    if (isDoc() && (multi || Z.z > 1.01)) return;
+    if (Math.abs(dx) > 40) showLb(dx < 0 ? cur.i + 1 : cur.i - 1);
+  });
+  stage.addEventListener('pointercancel', function () { sx = null; });
+
+  // برگه مدارک: جابه‌جایی با کشیدن، بزرگ‌نمایی با دو انگشت یا دابل‌کلیک
+  var ptrs = {}, pinch = null, drag = null, moved = false, lastTap = { t: 0, x: 0, y: 0 };
+  var ptrCount = function () { return Object.keys(ptrs).length; };
+  docEl.addEventListener('pointerdown', function (e) {
+    if (ptrCount() === 0) { multi = false; moved = false; }
+    ptrs[e.pointerId] = { x: e.clientX, y: e.clientY, x0: e.clientX, y0: e.clientY };
+    try { docEl.setPointerCapture(e.pointerId); } catch (err) {}
+    if (ptrCount() === 2) {
+      var k = Object.keys(ptrs), a = ptrs[k[0]], b = ptrs[k[1]];
+      pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, z: Z.z };
+      multi = true; drag = null; docEl.classList.remove('drag');
+    } else if (ptrCount() === 1 && Z.z > 1.01) {
+      drag = { x: e.clientX, y: e.clientY, sl: docEl.scrollLeft, st: docEl.scrollTop };
+      docEl.classList.add('drag');
+    }
+  });
+  docEl.addEventListener('pointermove', function (e) {
+    var p = ptrs[e.pointerId];
+    if (!p) return;
+    p.x = e.clientX; p.y = e.clientY;
+    if (Math.abs(p.x - p.x0) + Math.abs(p.y - p.y0) > 8) moved = true;
+    if (pinch && ptrCount() === 2) {
+      var k = Object.keys(ptrs), a = ptrs[k[0]], b = ptrs[k[1]], r = docEl.getBoundingClientRect();
+      applyZoom(pinch.z * (Math.hypot(a.x - b.x, a.y - b.y) / pinch.d), (a.x + b.x) / 2 - r.left, (a.y + b.y) / 2 - r.top);
+    } else if (drag) {
+      docEl.scrollLeft = drag.sl - (e.clientX - drag.x);
+      docEl.scrollTop = drag.st - (e.clientY - drag.y);
+    }
+  });
+  function endPtr(e, isUp) {
+    if (!ptrs[e.pointerId]) return;
+    delete ptrs[e.pointerId];
+    if (ptrCount() < 2) pinch = null;
+    if (ptrCount() === 0) {
+      drag = null; docEl.classList.remove('drag');
+      if (isUp && !moved && !multi) {
+        var now = Date.now();
+        if (now - lastTap.t < 320 && Math.abs(e.clientX - lastTap.x) < 30 && Math.abs(e.clientY - lastTap.y) < 30) {
+          var r = docEl.getBoundingClientRect();
+          if (Z.z > 1.01) applyZoom(1); else applyZoom(2.5, e.clientX - r.left, e.clientY - r.top);
+          lastTap.t = 0;
+        } else {
+          lastTap = { t: now, x: e.clientX, y: e.clientY };
+        }
+      }
+    } else if (ptrCount() === 1 && Z.z > 1.01) {
+      var q = ptrs[Object.keys(ptrs)[0]]; // بعد از زوم با دو انگشت، یک انگشت باقی‌مانده جابه‌جا می‌کند
+      drag = { x: q.x, y: q.y, sl: docEl.scrollLeft, st: docEl.scrollTop };
+      docEl.classList.add('drag');
+    }
+  }
+  docEl.addEventListener('pointerup', function (e) { endPtr(e, true); });
+  docEl.addEventListener('pointercancel', function (e) { endPtr(e, false); });
+
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') { closeLb(); }
+    else if (e.key === 'ArrowLeft') { showLb(cur.i + 1); }
+    else if (e.key === 'ArrowRight') { showLb(cur.i - 1); }
+    else if (isDoc() && (e.key === '+' || e.key === '=')) { step(1.4); }
+    else if (isDoc() && (e.key === '-' || e.key === '_')) { step(1 / 1.4); }
+    else if (isDoc() && e.key === '0') { applyZoom(1); }
+    else if (e.key === 'Tab') {
+      var f = [lbClose, lbPrev, lbNext, zOut, zReset, zIn].filter(function (b) { return !b.disabled && b.offsetParent !== null; });
+      if (!f.length) return;
+      var at = f.indexOf(document.activeElement);
+      e.preventDefault();
+      f[(at + (e.shiftKey ? f.length - 1 : 1)) % f.length].focus();
+    }
+  });
+
+  /* بازدارنده‌های ذخیره: راست‌کلیک و درگ. زوم صفحه فقط در نمای مدارک و به‌صورت کنترل‌شده کار می‌کند */
+  var guard = function (e) {
+    if (e.target.closest && e.target.closest('.rail, .lb, .avatar, .docs')) e.preventDefault();
+  };
+  document.addEventListener('contextmenu', guard);
+  document.addEventListener('dragstart', guard);
+  lb.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+      if (isDoc()) {
+        var r = docEl.getBoundingClientRect();
+        applyZoom(Z.z * Math.exp(-e.deltaY * 0.01), e.clientX - r.left, e.clientY - r.top);
+      }
+    }
+  }, { passive: false });
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (n) {
+    lb.addEventListener(n, function (e) { e.preventDefault(); });
+  });
+})();
+</script>
+
+</body>
+</html>
